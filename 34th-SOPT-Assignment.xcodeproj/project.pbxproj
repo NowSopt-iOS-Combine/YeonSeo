@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC319A402BECBBBE00A3D07D /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DC319A3F2BECBBBE00A3D07D /* CombineCocoa */; };
 		DC656BD52BDEA4E0001F1E04 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC656BD42BDEA4E0001F1E04 /* HomeViewController.swift */; };
 		DC656BD92BDEAA30001F1E04 /* HomeTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC656BD82BDEAA30001F1E04 /* HomeTopView.swift */; };
 		DC656BE12BE001B5001F1E04 /* HomeUpperTapBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC656BE02BE001B5001F1E04 /* HomeUpperTapBar.swift */; };
@@ -98,6 +99,7 @@
 			files = (
 				DC6599FE2BC2FA0D005B6A93 /* SnapKit in Frameworks */,
 				DC659A0D2BC37D85005B6A93 /* Then in Frameworks */,
+				DC319A402BECBBBE00A3D07D /* CombineCocoa in Frameworks */,
 				DC659A002BC2FA0D005B6A93 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +300,7 @@
 				DC6599FD2BC2FA0D005B6A93 /* SnapKit */,
 				DC6599FF2BC2FA0D005B6A93 /* SnapKit-Dynamic */,
 				DC659A0C2BC37D85005B6A93 /* Then */,
+				DC319A3F2BECBBBE00A3D07D /* CombineCocoa */,
 			);
 			productName = "34th-SOPT-Assignment";
 			productReference = DC6599E52BC2F8A6005B6A93 /* 34th-SOPT-Assignment.app */;
@@ -330,6 +333,7 @@
 			packageReferences = (
 				DC6599FC2BC2FA0D005B6A93 /* XCRemoteSwiftPackageReference "Snapkit" */,
 				DC659A0B2BC37D85005B6A93 /* XCRemoteSwiftPackageReference "Then" */,
+				DC319A3E2BECBBBE00A3D07D /* XCRemoteSwiftPackageReference "CombineCocoa" */,
 			);
 			productRefGroup = DC6599E62BC2F8A6005B6A93 /* Products */;
 			projectDirPath = "";
@@ -608,6 +612,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DC319A3E2BECBBBE00A3D07D /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
 		DC6599FC2BC2FA0D005B6A93 /* XCRemoteSwiftPackageReference "Snapkit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Snapkit/Snapkit.git";
@@ -627,6 +639,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DC319A3F2BECBBBE00A3D07D /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC319A3E2BECBBBE00A3D07D /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
+		};
 		DC6599FD2BC2FA0D005B6A93 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DC6599FC2BC2FA0D005B6A93 /* XCRemoteSwiftPackageReference "Snapkit" */;
