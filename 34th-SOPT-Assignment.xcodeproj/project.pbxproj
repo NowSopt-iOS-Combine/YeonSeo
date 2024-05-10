@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC319A402BECBBBE00A3D07D /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DC319A3F2BECBBBE00A3D07D /* CombineCocoa */; };
+		DC319A422BECBE1900A3D07D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC319A412BECBE1900A3D07D /* LoginViewModel.swift */; };
+		DC319A452BECBFDB00A3D07D /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC319A442BECBFDB00A3D07D /* ViewModelType.swift */; };
+		DC319A482BECC1DD00A3D07D /* UITextField+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC319A472BECC1DD00A3D07D /* UITextField+Combine.swift */; };
+		DC319A4A2BECC26B00A3D07D /* UIButton+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC319A492BECC26B00A3D07D /* UIButton+Combine.swift */; };
 		DC656BD52BDEA4E0001F1E04 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC656BD42BDEA4E0001F1E04 /* HomeViewController.swift */; };
 		DC656BD92BDEAA30001F1E04 /* HomeTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC656BD82BDEAA30001F1E04 /* HomeTopView.swift */; };
 		DC656BE12BE001B5001F1E04 /* HomeUpperTapBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC656BE02BE001B5001F1E04 /* HomeUpperTapBar.swift */; };
@@ -50,6 +55,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC319A412BECBE1900A3D07D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		DC319A442BECBFDB00A3D07D /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		DC319A472BECC1DD00A3D07D /* UITextField+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Combine.swift"; sourceTree = "<group>"; };
+		DC319A492BECC26B00A3D07D /* UIButton+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Combine.swift"; sourceTree = "<group>"; };
 		DC656BD42BDEA4E0001F1E04 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DC656BD82BDEAA30001F1E04 /* HomeTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopView.swift; sourceTree = "<group>"; };
 		DC656BE02BE001B5001F1E04 /* HomeUpperTapBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUpperTapBar.swift; sourceTree = "<group>"; };
@@ -98,6 +107,7 @@
 			files = (
 				DC6599FE2BC2FA0D005B6A93 /* SnapKit in Frameworks */,
 				DC659A0D2BC37D85005B6A93 /* Then in Frameworks */,
+				DC319A402BECBBBE00A3D07D /* CombineCocoa in Frameworks */,
 				DC659A002BC2FA0D005B6A93 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +115,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC319A432BECBFCC00A3D07D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				DC319A442BECBFDB00A3D07D /* ViewModelType.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		DC319A462BECC1C200A3D07D /* Combine+UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				DC319A472BECC1DD00A3D07D /* UITextField+Combine.swift */,
+				DC319A492BECC26B00A3D07D /* UIButton+Combine.swift */,
+			);
+			path = "Combine+UIKit";
+			sourceTree = "<group>";
+		};
 		DC656BCD2BDE9361001F1E04 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +226,7 @@
 		DC6599E72BC2F8A6005B6A93 /* 34th-SOPT-Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				DC319A432BECBFCC00A3D07D /* Protocol */,
 				DC659A062BC2FE9F005B6A93 /* Extensions */,
 				DC659A132BC5D4F0005B6A93 /* Resource */,
 				DC659A292BC5EED1005B6A93 /* Source */,
@@ -213,6 +241,7 @@
 		DC659A062BC2FE9F005B6A93 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DC319A462BECC1C200A3D07D /* Combine+UIKit */,
 				DC659A072BC2FEAC005B6A93 /* UIView+.swift */,
 				DC659A092BC37B98005B6A93 /* UITextField+.swift */,
 				DC659A0E2BC386DD005B6A93 /* UIStackView+.swift */,
@@ -264,6 +293,7 @@
 		DC659A2A2BC5EEDB005B6A93 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				DC319A412BECBE1900A3D07D /* LoginViewModel.swift */,
 				DC659A022BC2FA45005B6A93 /* LoginViewController.swift */,
 				DC659A2C2BC60700005B6A93 /* CreateNicknameViewController.swift */,
 			);
@@ -298,6 +328,7 @@
 				DC6599FD2BC2FA0D005B6A93 /* SnapKit */,
 				DC6599FF2BC2FA0D005B6A93 /* SnapKit-Dynamic */,
 				DC659A0C2BC37D85005B6A93 /* Then */,
+				DC319A3F2BECBBBE00A3D07D /* CombineCocoa */,
 			);
 			productName = "34th-SOPT-Assignment";
 			productReference = DC6599E52BC2F8A6005B6A93 /* 34th-SOPT-Assignment.app */;
@@ -330,6 +361,7 @@
 			packageReferences = (
 				DC6599FC2BC2FA0D005B6A93 /* XCRemoteSwiftPackageReference "Snapkit" */,
 				DC659A0B2BC37D85005B6A93 /* XCRemoteSwiftPackageReference "Then" */,
+				DC319A3E2BECBBBE00A3D07D /* XCRemoteSwiftPackageReference "CombineCocoa" */,
 			);
 			productRefGroup = DC6599E62BC2F8A6005B6A93 /* Products */;
 			projectDirPath = "";
@@ -374,6 +406,7 @@
 				DC656BF82BE092A7001F1E04 /* UICollectionView+.swift in Sources */,
 				DC656BD92BDEAA30001F1E04 /* HomeTopView.swift in Sources */,
 				DC659A052BC2FA51005B6A93 /* WelcomeViewController.swift in Sources */,
+				DC319A422BECBE1900A3D07D /* LoginViewModel.swift in Sources */,
 				DC656C092BE0FBC1001F1E04 /* HeaderModel.swift in Sources */,
 				DC6599E92BC2F8A6005B6A93 /* AppDelegate.swift in Sources */,
 				DC659A0A2BC37B98005B6A93 /* UITextField+.swift in Sources */,
@@ -382,9 +415,12 @@
 				DC656C072BE0FB87001F1E04 /* MainModel.swift in Sources */,
 				DC6599EB2BC2F8A6005B6A93 /* SceneDelegate.swift in Sources */,
 				DC656C132BE12513001F1E04 /* SearchViewController.swift in Sources */,
+				DC319A4A2BECC26B00A3D07D /* UIButton+Combine.swift in Sources */,
 				DC656BF62BE02748001F1E04 /* MainViewCellTableViewCell.swift in Sources */,
+				DC319A482BECC1DD00A3D07D /* UITextField+Combine.swift in Sources */,
 				DC656C152BE1252A001F1E04 /* HistoryViewController.swift in Sources */,
 				DC659A082BC2FEAC005B6A93 /* UIView+.swift in Sources */,
+				DC319A452BECBFDB00A3D07D /* ViewModelType.swift in Sources */,
 				DC656C032BE0FB66001F1E04 /* LiveModel.swift in Sources */,
 				DC656BE12BE001B5001F1E04 /* HomeUpperTapBar.swift in Sources */,
 				DC656BD52BDEA4E0001F1E04 /* HomeViewController.swift in Sources */,
@@ -608,6 +644,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DC319A3E2BECBBBE00A3D07D /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
 		DC6599FC2BC2FA0D005B6A93 /* XCRemoteSwiftPackageReference "Snapkit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Snapkit/Snapkit.git";
@@ -627,6 +671,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DC319A3F2BECBBBE00A3D07D /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC319A3E2BECBBBE00A3D07D /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
+		};
 		DC6599FD2BC2FA0D005B6A93 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DC6599FC2BC2FA0D005B6A93 /* XCRemoteSwiftPackageReference "Snapkit" */;

@@ -8,14 +8,19 @@
 import UIKit
 import SnapKit
 import Then
+import Combine
 
 class LoginViewController: UIViewController {
     
     //MARK: - Property
     
     var passwardRevealed = true
+    
     var nickname: String? = ""
-    let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+
+    var viewModel : LoginViewModel!
+    
+    private var mySubscriptions = Set<AnyCancellable>()
     
     
     // MARK: - UIView
@@ -116,6 +121,7 @@ class LoginViewController: UIViewController {
         initBackground()
         initViews()
         initConstraints()
+        publish() 
     }
     
     // MARK: - UI
@@ -207,8 +213,22 @@ class LoginViewController: UIViewController {
         self.present(VC, animated: true)
     }
     
-    func checkEmail(str: String) -> Bool {
-        return  NSPredicate(format: "SELF MATCHES %@", emailRegEx).evaluate(with: str)
+
+    
+    func publish() {
+        viewModel = LoginViewModel()
+        
+        let input = LoginViewModel.Input(
+            loginTextField: idTextField.myTextPublisher,
+            passTextField: passwordTextField.myTextPublisher)
+        
+        let output = viewModel.transform(from: input)
+
+        output.validate
+            .print()
+            .receive(on: RunLoop.main)
+            .assign(to: \.isValid, on: loginButton)
+            .store(in: &mySubscriptions)
     }
 }
 
@@ -269,17 +289,7 @@ extension LoginViewController: UITextFieldDelegate {
     @objc func textFieldTapped(_ textField: UITextField) {
         let id = idTextField.text ?? ""
         let password = passwordTextField.text ?? ""
-        let isTextFieldsNotEmpty = !id.isEmpty && !password.isEmpty && checkEmail(str: id)
-        
-        //로그인버튼 색깔 변경
-        loginButton.isEnabled = isTextFieldsNotEmpty
-        loginButton.backgroundColor = isTextFieldsNotEmpty ? UIColor(named: "BrandColor") : .black
-        if isTextFieldsNotEmpty {
-            loginButton.setTitleColor(.white, for: .normal)
-        } else {
-            loginButton.setTitleColor(.gray2, for: .normal)
-        }
-        
+
         //delete button
         if textField.tag == 100 {
             idDeleteButton.isHidden = id.isEmpty
@@ -293,7 +303,3 @@ extension LoginViewController: UITextFieldDelegate {
         }
     }
 }
-
-//#Preview {
-//    LoginViewController()
-//}
